@@ -43,10 +43,10 @@ Para compilar e executar este projeto, você precisará de:
 
 ##  Instruções de Instalação e Execução
 
-### 1. Clonar o Repositório
+ 1. Clonar o Repositório
 ```bash
 git clone https://github.com/maarcsx/adc-multiplexado-expansao.git
 ```
 
-### 2. Verifique se todos os arquivos do projeto estão na sua maquina
-### 3. Ou tambem pode apenas simular no wokwi clicando [AQUI] https://wokwi.com/projects/460514569439680513
+2. Verifique se todos os arquivos do projeto estão na sua maquina
+3. Ou tambem pode apenas simular no wokwi clicando [AQUI] (https://wokwi.com/projects/460514569439680513)
