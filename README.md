@@ -1,10 +1,11 @@
 # adc-multiplexado-expansao
+## Sistema de Expansão Analógica com Multiplexação
 
 Este projeto implementa um sistema de monitoramento de sensores (MQ2, LDR e NTC) utilizando o microcontrolador **Raspberry Pi Pico W**. O diferencial técnico é o uso de um **Multiplexador CD74HC4067**, que permite ler múltiplos sinais analógicos através de uma única porta ADC, otimizando os recursos da placa BitDogLab.
 
 ---
 
-## 🎯 Objetivo do Projeto
+##  Objetivo do Projeto
 
 O objetivo principal é demonstrar a viabilidade da expansão de portas analógicas para monitorar a **variação de tensão** nos seguintes sensores:
 - **MQ2:** Detecção de variação de fumaça e gases inflamáveis.
@@ -15,7 +16,7 @@ O sistema processa essas variações e as exibe em tempo real em um **Display OL
 
 ---
 
-## 🛠️ Hardware Necessário
+##  Hardware Necessário
 
 - **Microcontrolador:** Raspberry Pi Pico W.
 - **Placa de Expansão:** BitDogLab.
@@ -26,7 +27,7 @@ O sistema processa essas variações e as exibe em tempo real em um **Display OL
 
 ---
 
-## 💻 Dependências e Requisitos
+##  Dependências e Requisitos
 
 Para compilar e executar este projeto, você precisará de:
 
@@ -40,9 +41,12 @@ Para compilar e executar este projeto, você precisará de:
 
 ---
 
-## 🚀 Instruções de Instalação e Execução
+##  Instruções de Instalação e Execução
 
 ### 1. Clonar o Repositório
 ```bash
-git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
-cd seu-repositorio"
+git clone https://github.com/maarcsx/adc-multiplexado-expansao.git
+```
+
+### 2. Verifique se todos os arquivos do projeto estão na sua maquina
+### 3. Ou tambem pode apenas simular no wokwi clicando [AQUI] https://wokwi.com/projects/460514569439680513
