@@ -6,6 +6,30 @@ Este projeto implementa um sistema de monitoramento de sensores (MQ2, LDR e NTC)
 
 ---
 
+## Guia de Uso Rapido
+
+Para operar o sistema corretamente, siga os passos abaixo:
+
+1. **Inicializacao:** Pressione o **Botao A** na placa BitDogLab para ativar a varredura dos sensores.
+2. **Interacao via Console:** Com o projeto em execucao, abra o monitor serial e utilize as teclas abaixo:
+    * **Tecla A:** Inicia ou retoma a leitura sequencial dos sensores.
+    * **Tecla B:** Alterna para o modo de exibicao detalhada de um unico sensor.
+    * **Tecla C:** Limpa o historico de leituras e reseta o Display OLED.
+    * **Tecla D:** Para a execucao e coloca o sistema em modo Standby.
+3. **Interrupcao de Hardware (Botao B):** O Botao B fisico esta configurado via **IRQ (Interrupt Request)**. Ao ser pressionado, ele interrompe imediatamente o processamento atual para retornar ao menu principal ou executar uma rotina de seguranca, garantindo resposta instantanea do hardware.
+
+---
+![Funcionamento do Projeto no Wokwi](Funcionamento%20Wokwi.png)
+---
+
+## Documentação Detalhada
+
+Para uma análise profunda sobre a arquitetura de hardware, diagramas de circuito e fundamentação teórica deste projeto, acesse o relatório final no link abaixo:
+
+[![Download PDF](https://img.shields.io/badge/RELATÓRIO_FINAL-ACESSAR_PDF-red?style=for-the-badge&logo=adobe-acrobat-reader&logoColor=white)](https://github.com/maarcsx/adc-multiplexado-expansao/raw/main/PDF%20final%20embarcatech.pdf)
+
+---
+
 ## Objetivo do Projeto
 
 O objetivo principal e demonstrar a viabilidade da expansao de portas analogicas para monitorar a variacao de tensao nos seguintes sensores:
@@ -33,9 +57,9 @@ O sistema processa essas variacoes e as exibe em tempo real em um Display OLED 1
 
 Para compilar e executar este projeto, voce precisara de:
 
-1.  **SDK do Raspberry Pi Pico:** Configurado no seu ambiente (C/C++).
-2.  **Extensao Raspberry Pi Pico para VS Code:** Para facilitar o build e o flash.
-3.  **Bibliotecas incluidas no projeto:**
+1. **SDK do Raspberry Pi Pico:** Configurado no seu ambiente (C/C++).
+2. **Extensao Raspberry Pi Pico para VS Code:** Para facilitar o build e o flash.
+3. **Bibliotecas incluidas no projeto:**
     * `hardware/adc.h` (Leitura analogica)
     * `hardware/i2c.h` (Comunicacao com o display)
     * `hardware/uart.h` (Interface com o console serial)
@@ -51,10 +75,10 @@ O projeto pode ser testado de duas maneiras: atraves do hardware real ou por mei
 
 Para executar o codigo na placa BitDogLab ou Raspberry Pi Pico W, siga os passos abaixo:
 
-1.  **Clonagem do Repositorio:**
-    ```bash
-    git clone [https://github.com/maarcsx/adc-multiplexado-expansao.git](https://github.com/maarcsx/adc-multiplexado-expansao.git)
-    ```
+1. **Clonagem do Repositorio:**
+   ```bash
+   git clone [https://github.com/maarcsx/adc-multiplexado-expansao.git](https://github.com/maarcsx/adc-multiplexado-expansao.git)
+   ```
 2.  **Importacao do Projeto:** Abra a pasta no VS Code com a extensao Raspberry Pi Pico devidamente configurada.
 3.  **Verificacao de Arquivos:** Certifique-se de que o arquivo `main.c` e as pastas de drivers (`mq2` e `ssd1306`) estao na raiz do projeto.
 4.  **Compilacao e Flash:** Utilize as ferramentas do SDK para compilar o projeto e carregar o arquivo `.uf2` no microcontrolador.
@@ -77,6 +101,17 @@ Este projeto esta licenciado sob a MIT License. Para mais informacoes, consulte 
 
 ## Autor
 
-**Marcos Crisostomo** 
-Tecnico em Eletrotecnica | Automacao Industrial  
-Projeto integrante da capacitacao em sistemas embarcados - **EmbarcaTech 2026**
+**Marcos Crisostomo**<br>Tecnico em Eletrotecnica | Automacao Industrial  
+Projeto capacitacao em sistemas embarcados<br>**EmbarcaTech 2026**
+
+---
+
+## Creditos e Referencias
+
+Este projeto foi desenvolvido utilizando recursos e bibliotecas oficiais da comunidade de sistemas embarcados. Agradecimentos especiais aos mantenedores das seguintes tecnologias:
+
+* **Pico SDK:** Ferramental essencial para o desenvolvimento em C/C++ no microcontrolador RP2040.  
+  Disponível em: [https://github.com/raspberrypi/pico-sdk](https://github.com/raspberrypi/pico-sdk)
+* **BitDogLab:** Plataforma de hardware e exemplos que serviram de base para a integração dos componentes.  
+  Disponível em: [https://github.com/BitDogLab/BitDogLab](https://github.com/BitDogLab/BitDogLab)
+
